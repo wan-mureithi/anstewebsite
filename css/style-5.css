@@ -1490,7 +1490,7 @@ ul.about-listing {
 /*-------------- Banner-css ------------------*/
 
 .bg-banner {
-	background: url('../images/banner.jpg');
+	background: url('../images/aboutus-bg.jpg');
 	width: 100%;
 	position: relative;
 }
