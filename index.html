@@ -23,6 +23,33 @@
     <!-- Custom.css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,10 +76,8 @@
                             </ul>
                             <div class="topbar-icon">
                                 <ul>
-                                    <li><a href="#"><i class="fab fa-behance"></i></a></li>
                                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-google"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -75,18 +100,18 @@
                                
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="about.html">Our Services</a>
+                                <a id="servicesbtn" class="nav-link" href="#services">Our Services</a>
                                
                             </li>
            
                             <li class="nav-item">
-                                <a class="nav-link" href="package-list.html">Tour Packages</a>
+                                <a class="nav-link" href="#packages">Tour Packages</a>
                             </li>
                         </ul>
                         
                     </div>
                 </nav>
-                <div style="width:165px; height: 85px;" class="mobile-menu" data-logo="images/removebg-preview.png"></div>
+                <div style="width:165px;" class="mobile-menu" data-logo="images/removebg-preview.png"></div>
             </div>
         </div>
         <!-- End-Menu-area-->
@@ -100,10 +125,9 @@
                     <div class="row justify-content-lg-center">
                         <div class="col-lg-10 text-center">
                             <div class="hero-slider__content">
-                                <h2 class="hero-slider__title">Take Your Dream</h2>
-                                <p class="hero-slider__text">Et ea invidunt magna dolores ut et magna eos sit erat.
-                                    Dolor et kasd takimata no duo gubergren justo ut nonumy, voluptua accusam at clita
-                                    ut. Rebum clita accusam nonumy.</p>
+                                <h2 class="hero-slider__title">Explore the world, one adventure at a time.</h2>
+                                <p class="hero-slider__text">Travel with us and let our team of experts handle the details, 
+                                    leaving you free to make unforgettable memories.</p>
                                 <a class="hero-slider__btn" href="contact.html"> Contact Us</a>
                             </div>
                         </div>
@@ -119,9 +143,9 @@
                     <div class="row">
                         <div class="col-lg-7 col-md-12">
                             <div class="hero-slider__content">
-                                <h2 class="hero-slider__title">Choose The Best Tour Package</h2>
-                                <p class="hero-slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit sed
-                                    do eiusm tempor incididunt ut labore et dolore.</p>
+                                <h2 class="hero-slider__title">Adventure awaits, let's explore together</h2>
+                                <p class="hero-slider__text">Embark on unforgettable journeys with our expertly curated 
+                                    tours and immerse yourself in new cultures and experiences.</p>
                                 <a class="hero-slider__btn" href="contact.html"> Contact Us</a>
                             </div>
                         </div>
@@ -136,10 +160,9 @@
                     <div class="row justify-content-lg-center">
                         <div class="col-lg-10 text-center">
                             <div class="hero-slider__content">
-                                <h2 class="hero-slider__title">Travel To The Best Beautiful Place</h2>
-                                <p class="hero-slider__text">Sed ipsum et eos clita elitr vero invidunt et sanctus. Et
-                                    takimata ipsum consetetur dolores consetetur amet lorem magna. Justo eos eirmod diam
-                                    et invidunt dolor amet rebum..</p>
+                                <h2 class="hero-slider__title">Create memories that will last a lifetime</h2>
+                                <p class="hero-slider__text">Let us take you on a journey of a lifetime,
+                                     filled with unforgettable experiences and unforgettable moments.</p>
                                 <a class="hero-slider__btn" href="contact.html"> Contact Us</a>
                             </div>
                         </div>
@@ -165,13 +188,11 @@
                 <div class="col-lg-6">
                     <div class="about-content">
                         <h2>We make the best for all our customers.</h2>
-                        <p>We are your travel guide both locally and internationally. We ease and take care
-                            of the processes from travelling, bookings of hotels and conference rooms,
-                            ticketing, site seeing. Leave all your tour and travel safaris’ problems with us and
-                            we ensure your stay is worthwhile. We also recommend activities for your fun
-                            while you are at it.</p>
-                        <p>Tempor dolor vero dolor sadipscing eos erat dolor sanctus aliquyam et, et justo labore lorem
-                            kasd clita consetetur no no ut erat dolor. </p>
+                        <p>At our tour agency, we believe that our customers are at the heart of everything we do. 
+                            That's why we're dedicated to providing you with the best possible travel experiences,
+                             tailored to your needs and preferences. Whether you're looking for an adventure-packed itinerary or a relaxing getaway, our team of experts will work with you to create a personalized tour that meets your expectations and exceeds them. We take care of every detail, from transportation and accommodations to activities and dining, so that you can focus on enjoying your trip. 
+                             </p>
+                        <p>With us, you can be confident that you'll receive exceptional service, high-quality experiences, and unforgettable memories that will last a lifetime. </p>
 
                         <a href="about.html" class="read-btn">Read More</a>
                     </div>
@@ -186,9 +207,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="center-title ">
-                        <h2 class="title">Why Choose Us</h2>
-                        <h4 class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua minim veniam.</h4>
+                        <h2 class="title">Our services</h2>
+                        <h4 class="sub-title">Our tours are designed to inspire, challenge, and amaze you. Come with us and discover the extraordinary.</h4>
                     </div>
                 </div>
             </div>
@@ -200,38 +220,43 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="servicebox-one service-type-two">
-                                <div class="service-box-icon"><i class="fas fa-route"></i></div>
-                                <h3 class="service-box-title">Air Ticketing</h3>
-                                <p class="service-box-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a class="btn" href="#">See more</a>
+                                <div class="service-box-icon"><i class="fas fa-bullhorn"></i></div>
+                                <h3 class="service-box-title">Itinerary curation</h3>
+                                <p class="service-box-desc">We will work with you to create a customized itinerary that matches your travel preferences,
+                                     interests, and budget, ensuring that your trip is a memorable and stress-free experience.</p>
+                                
                             </div>
+                           
                         </div>
                         <!-- item -->
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="servicebox-one service-type-two">
                                 <div class="service-box-icon"><i class="fab fa-avianex"></i></div>
                                 <h3 class="service-box-title">Visa Application </h3>
-                                <p class="service-box-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit .
+                                <p class="service-box-desc">We ensure that you have all the necessary documentation and 
+                                    information to apply for a visa and that the process is as smooth and hassle-free as possible..
                                 </p>
-                                <a class="btn" href="#">See more</a>
+                                
                             </div>
                         </div>
                         <!-- item -->
-                        <div class="col-lg-6 col-md-6 col-sm-12">
+                        <!-- <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="servicebox-one service-type-two">
-                                <div class="service-box-icon"><i class="fas fa-bullhorn"></i></div>
-                                <h3 class="service-box-title">Itinerary curation</h3>
-                                <p class="service-box-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a class="btn" href="#">See more</a>
+                                <div class="service-box-icon"><i class="fas fa-route"></i></div>
+                                <h3 class="service-box-title">Air Ticketing</h3>
+                                <p class="service-box-desc">We offer competitive prices and a range of airlines and routes to choose from, 
+                                    making it easy for you to find the perfect flight to your destination.</p>
+                                
                             </div>
-                        </div>
+                        </div> -->
                         <!-- item -->
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="servicebox-one service-type-two">
                                 <div class="service-box-icon"><i class="fa fa-home"></i></div>
                                 <h3 class="service-box-title">Travel Insurance</h3>
-                                <p class="service-box-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a class="btn" href="#">See more</a>
+                                <p class="service-box-desc">comprehensive travel insurance that covers unexpected events such as trip cancellations, medical emergencies, and lost luggage, giving you peace of 
+                                    mind and protection while you travel</p>
+                                
                             </div>
                         </div>
                         <!-- item -->
@@ -239,20 +264,22 @@
                             <div class="servicebox-one service-type-two">
                                 <div class="service-box-icon"><i class="fas fa-ticket-alt"></i></div>
                                 <h3 class="service-box-title">M.I.C.E Facilitation</h3>
-                                <p class="service-box-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a class="btn" href="#">See more</a>
+                                <p class="service-box-desc">We provide Meeting, Incentive, Conference, and Event (M.I.C.E) facilitation services, helping you plan and organize corporate events, conferences,
+                                     and other business meetings with ease.</p>
+                                
                             </div>
                         </div>
                         <!-- item -->
-                        <div class="col-lg-6 col-md-6 col-sm-12">
+                        <!-- <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="servicebox-one service-type-two">
                                 <div class="service-box-icon"><i class="fa fa-bed"></i></div>
                                 <h3 class="service-box-title">Hotel Booking</h3>
-                                <p class="service-box-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit .
+                                <p class="service-box-desc">Offering a wide selection of accommodation options to suit all budgets and preferences, 
+                                    from luxury resorts to cozy guesthouses, ensuring that you have a comfortable and enjoyable stay
                                 </p>
-                                <a class="btn" href="#">See more</a>
+                                
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -269,147 +296,115 @@
                 <div class="col-lg-12">
                     <div class="center-title ">
                         <h2 class="title">Popular Tour Package</h2>
-                        <h4 class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua minim veniam.</h4>
+                        <h4 class="sub-title">Our tours are designed to help you discover the beauty of the world,
+                             whether it's through breathtaking landscapes or fascinating cultures.</h4>
                     </div>
                 </div>
             </div>
-            <div class="row masonry-item">
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry">
-                    <div class="package-one">
-                        <div class="img-wapper">
-                            <img src="images/packages/cpt.jpg" alt="package-img">
-                        </div>
-                        <div class="package-content">
-                            <h3>Dubai – All Stunning Places</h3>
-                            <p>4 Days, 5 Nights Start From <span>$500</span></p>
-                            <ul class="ct-action">
-                                <li><a href="#" class="booking-btn">Book Now</a>
-                                </li>
-                                <li>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry">
-                    <div class="package-one">
-                        <div class="img-wapper">
-                            <img src="images/packages/forodhani.jpg" alt="package-img">
-                        </div>
-                        <div class="package-content">
-                            <h3>Thailand – All Stunning Places</h3>
-                            <p>4 Days, 5 Nights Start From <span>$600</span></p>
-                            <ul class="ct-action">
-                                <li><a href="#" class="booking-btn">Book Now</a>
-                                </li>
-                                <li>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-
-                                </li>
-                            </ul>
+            <div class="row small-package-list">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="single_package">
+                        <div class="media">
+                            <img src="images/packages/marina.jpg" alt="">
+                            <div class="media-body">
+                                <span class="direction"><i class="fas fa-map-marker-alt"></i> Mombasa - Kenya</span>
+                                <h3><a href="#">Beach holiday vacation.</a></h3>
+                                <div class="duration">
+                                    <ul>
+                                        <li>
+                                            <p> <i class="far fa-clock"></i> Duration</p>
+                                            <h5>4 Days</h5>
+                                        </li>
+                                        <li>
+                                            <p> <i class="fas fa-tags"></i> From</p>
+                                            <h5>KES 30,000</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--/.duration-->
+                                <a href="#" class="btn-packlist">Book now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- item -->
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry">
-                    <div class="package-one">
-                        <div class="img-wapper">
-                            <img src="images/packages/marina.JPG" alt="package-img">
-                        </div>
-                        <div class="package-content">
-                            <h3>Brazil – All Stunning Places</h3>
-                            <p>4 Days, 5 Nights Start From <span>$500</span></p>
-                            <ul class="ct-action">
-                                <li><a href="#" class="booking-btn">Book Now</a>
-                                </li>
-                                <li>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry">
-                    <div class="package-one">
-                        <div class="img-wapper">
-                            <img src="images/packages/dubai.jpg" alt="package-img">
-                        </div>
-                        <div class="package-content">
-                            <h3>Italy – All Stunning Places</h3>
-                            <p>4 Days, 5 Nights Start From <span>$550</span></p>
-                            <ul class="ct-action">
-                                <li><a href="#" class="booking-btn">Book Now</a>
-                                </li>
-                                <li>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-
-                                </li>
-                            </ul>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="single_package">
+                        <div class="media">
+                            <img src="images/packages/elephants.jpg" alt="">
+                            <div class="media-body">
+                                <span class="direction"><i class="fas fa-map-marker-alt"></i> Maasai Mara - Kenya </span>
+                                <h3><a href="#">Luxury camping safari experience.</a></h3>
+                                <div class="duration">
+                                    <ul>
+                                        <li>
+                                            <p> <i class="far fa-clock"></i> Duration</p>
+                                            <h5>4 Days</h5>
+                                        </li>
+                                        <li>
+                                            <p> <i class="fas fa-tags"></i> From</p>
+                                            <h5>KES 40,000</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--/.duration-->
+                                <a href="#" class="btn-packlist">Book now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- item -->
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry">
-                    <div class="package-one">
-                        <div class="img-wapper">
-                            <img src="images/packages/citytours.jpg" alt="package-img">
-                        </div>
-                        <div class="package-content">
-                            <h3>England – All Stunning Places</h3>
-                            <p>4 Days, 5 Nights Start From <span>$600</span></p>
-                            <ul class="ct-action">
-                                <li><a href="#" class="booking-btn">Book Now</a>
-                                </li>
-                                <li>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-
-                                </li>
-                            </ul>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="single_package">
+                        <div class="media">
+                            <img src="images/packages/safari.jpg" alt="">
+                            <div class="media-body">
+                                <span class="direction"><i class="fas fa-map-marker-alt"></i> Stone town - Zanzibar </span>
+                                <h3><a href="#">Relaxing island escape.</a></h3>
+                                <div class="duration">
+                                    <ul>
+                                        <li>
+                                            <p> <i class="far fa-clock"></i> Duration</p>
+                                            <h5>5 Days</h5>
+                                        </li>
+                                        <li>
+                                            <p> <i class="fas fa-tags"></i> From</p>
+                                            <h5>KES 50,000</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--/.duration-->
+                                <a href="#" class="btn-packlist">Book now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- item -->
-                <div class="col-lg-4 col-md-6 col-sm-12 masonry">
-                    <div class="package-one">
-                        <div class="img-wapper">
-                            <img src="images/packages/safari.jpg" alt="package-img">
-                        </div>
-                        <div class="package-content">
-                            <h3>India – All Stunning Places</h3>
-                            <p>4 Days, 5 Nights Start From <span>$400</span></p>
-                            <ul class="ct-action">
-                                <li><a href="#" class="booking-btn">Book Now</a>
-                                </li>
-                                <li>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </li>
-                            </ul>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="single_package">
+                        <div class="media">
+                            <img src="images/packages/dubai.jpg" alt="">
+                            <div class="media-body">
+                                <span class="direction"><i class="fas fa-map-marker-alt"></i> Jumeirah - Dubai</span>
+                                <h3><a href="#">Luxury coastal experience.</a></h3>
+                                <div class="duration">
+                                    <ul>
+                                        <li>
+                                            <p> <i class="far fa-clock"></i> Duration</p>
+                                            <h5>10 Days</h5>
+                                        </li>
+                                        <li>
+                                            <p> <i class="fas fa-tags"></i> From</p>
+                                            <h5>KES 350,000</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!--/.duration-->
+                                <a href="#" class="btn-packlist">Book now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- item-end -->
             </div>
         </div>
     </section>
@@ -418,82 +413,7 @@
     <!-- Desination-slide -->
   
     <!-- End-Desination-slide -->
-    <!-- Testimonial-section -->
     
-    <!-- End-Testimonial-section -->
-    <!-- Blog-section -->
-    <section class="ws-section-spacing blog-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="center-title ">
-                        <h2 class="title">Travel guide and Expert Advice</h2>
-                        <h4 class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua minim veniam.</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="package-one blog-box">
-                        <div class="img-wapper">
-                            <img src="images/packages/tour1.JPG" alt="package-img">
-                        </div>
-                        <div class="package-content">
-                            <h3><a href="blog-details.html">Eos ut takimata dolor dolor.</a></h3>
-                            <ul class="meta-tag">
-                                <li><a href="#"><i class="fa fa-user"></i> Jhon Doe</a></li>
-                                <li><a href="#"><i class="far fa-calendar-alt"></i> 12 june, 2019</a></li>
-                                <li><a href="#"><i class="fa fa-comments"></i> 10</a></li>
-                            </ul>
-                            <p>Erat erat ea amet et amet et lorem at labore invidunt, aliquyam gubergren duo duo dolor
-                                ipsum invidunt aliquyam diam.</p>
-                            <a href="#" class="read-btn">Read More <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="package-one blog-box">
-                        <div class="img-wapper">
-                            <img src="images/packages/jetskii2.jpg" alt="package-img">
-                        </div>
-                        <div class="package-content">
-                            <h3><a href="blog-details.html">Eirmod ut sanctus diam sed.</a></h3>
-                            <ul class="meta-tag">
-                                <li><a href="#"><i class="fa fa-user"></i> Jhon Doe</a></li>
-                                <li><a href="#"><i class="far fa-calendar-alt"></i> 15 june, 2019</a></li>
-                                <li><a href="#"><i class="fa fa-comments"></i> 10</a></li>
-                            </ul>
-                            <p>Erat erat ea amet et amet et lorem at labore invidunt, aliquyam gubergren duo duo dolor
-                                ipsum invidunt aliquyam diam.</p>
-                            <a href="#" class="read-btn">Read More <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="package-one blog-box">
-                        <div class="img-wapper">
-                            <img src="images/pack-6.jpg" alt="package-img">
-                        </div>
-                        <div class="package-content">
-                            <h3><a href="blog-details.html">Eirmod diam amet diam clita</a></h3>
-                            <ul class="meta-tag">
-                                <li><a href="#"><i class="fa fa-user"></i> Jhon Doe</a></li>
-                                <li><a href="#"><i class="far fa-calendar-alt"></i> 20 june, 2019</a></li>
-                                <li><a href="#"><i class="fa fa-comments"></i> 10</a></li>
-                            </ul>
-                            <p>Erat erat ea amet et amet et lorem at labore invidunt, aliquyam gubergren duo duo dolor
-                                ipsum invidunt aliquyam diam.</p>
-                            <a href="#" class="read-btn">Read More <i class="fas fa-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End-Blog-section -->
     <!-- Partner-section -->
     <section class="same-section-spacing bg-gray">
         <div class="container">
@@ -543,7 +463,7 @@
     <footer class="ws-section-spacing img-footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-7 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="footer-widget">
                         <div class="title">
                             <h3>About Us</h3>
@@ -558,23 +478,8 @@
 
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-5 col-sm-12">
-                    <div class="footer-widget">
-                        <div class="title">
-                            <h3>Useful Links</h3>
-                        </div>
-                        <ul class="link-widget">
-                            <li><a href="#">Top Tour</a></li>
-                            <li><a href="#">New Travel</a></li>
-                            <li><a href="#">How - To</a></li>
-                            <li><a href="#">Tips and Tricks</a></li>
-                            <li><a href="#">Best Tour</a></li>
-                            <li><a href="#">Top Travel</a></li>
-                        </ul>
-                    </div>
-                </div>
                 
-                <div class="col-lg-5 col-md-7 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="footer-widget">
                         <div class="title">
                             <h3>Contact Info</h3>
@@ -620,9 +525,9 @@
     <a id="btn-to-top" class="show"></a>
     <!-- Jquery.min.js-->
     <script>
-        $("button").click(function() {
+        $("#servicesbtn").click(function() {
     $('html,body').animate({
-        scrollTop: $(".services").offset().top},
+        scrollTop: $("#services").offset().top},
         'slow');
 });
     </script>
