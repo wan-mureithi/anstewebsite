@@ -52,15 +52,30 @@ $(document).ready(function(){
 </script>
 <script>
     // Add active class to the current button (highlight it)
-    var header = document.getElementById("navbarlinks");
-    var btns = header.getElementsByClassName("nav-item");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function() {
-      var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-      });
-    }
+    $(document).ready(function () {
+    $('.navbar-nav li a').click(function(e) {
+
+        $('.navbar-nav li.active').removeClass('active');
+
+        var $parent = $(this).parent();
+        $parent.addClass('active');
+        e.preventDefault();
+    });
+});
+
+// var menu = document.querySelector('.navbar-nav');
+// var anchors = menu.getElementsByTagName('a');
+
+// for (var i = 0; i < anchors.length; i += 1) {
+//   anchors[i].addEventListener('click', function() { clickHandler(anchors[i]) }, false);
+// }
+
+// function clickHandler(anchor) {
+//   var hasClass = anchor.getAttribute('class');
+//   if (hasClass !== 'active') {
+//     anchor.setAttribute('class', 'active');
+//   }
+// }
     </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -110,7 +125,7 @@ $(document).ready(function(){
                                 <a class="nav-link" href="#">Home</a>
                                
                             </li>
-                            <li class="nav-item ">
+                            <li class="nav-item">
                                 <a class="nav-link" href="#services">Our Services</a>
                                
                             </li>
@@ -413,7 +428,7 @@ $(document).ready(function(){
                                     </ul>
                                 </div>
                                 <!--/.duration-->
-                                <a href="contact-us.html" class="btn-packlist">Book now</a>
+                                <a href="#contactus" class="btn-packlist">Book now</a>
                             </div>
                         </div>
                     </div>
