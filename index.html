@@ -50,7 +50,18 @@ $(document).ready(function(){
   });
 });
 </script>
-
+<script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("navbarlinks");
+    var btns = header.getElementsByClassName("nav-item");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+      });
+    }
+    </script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -94,22 +105,22 @@ $(document).ready(function(){
                         <img src="images/removebg-preview.png" alt="logo" style="width:200px;">
                     </a>
                     <div class="collapse navbar-collapse my-lg-0" id="navbarNav">
-                        <ul class="navbar-nav">
+                        <ul id="navbarlinks" class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home</a>
+                                <a class="nav-link" href="#">Home</a>
                                
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="about.html">Our Services</a>
+                                <a class="nav-link" href="#services">Our Services</a>
                                
                             </li>
            
                             <li class="nav-item">
-                                <a class="nav-link" href="package-list.html">Tour Packages</a>
+                                <a class="nav-link" href="#packages">Tour Packages</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="contact-us.html">Contact</a>
+                                <a class="nav-link" href="#contactus">Contact</a>
                             </li>
                         </ul>
                         
@@ -132,7 +143,7 @@ $(document).ready(function(){
                                 <h2 class="hero-slider__title">Explore the world, one adventure at a time.</h2>
                                 <p class="hero-slider__text">Travel with us and let our team of experts handle the details, 
                                     leaving you free to make unforgettable memories.</p>
-                                <a class="hero-slider__btn" href="contact.html"> Contact Us</a>
+                                <a class="hero-slider__btn" href="#contactus"> Contact Us</a>
                             </div>
                         </div>
                     </div>
@@ -150,7 +161,7 @@ $(document).ready(function(){
                                 <h2 class="hero-slider__title">Adventure awaits, let's explore together</h2>
                                 <p class="hero-slider__text">Embark on unforgettable journeys with our expertly curated 
                                     tours and immerse yourself in new cultures and experiences.</p>
-                                <a class="hero-slider__btn" href="contact.html"> Contact Us</a>
+                                <a class="hero-slider__btn" href="#contactus"> Contact Us</a>
                             </div>
                         </div>
                     </div>
@@ -167,7 +178,7 @@ $(document).ready(function(){
                                 <h2 class="hero-slider__title">Create memories that will last a lifetime</h2>
                                 <p class="hero-slider__text">Let us take you on a journey of a lifetime,
                                      filled with unforgettable experiences and moments.</p>
-                                <a class="hero-slider__btn" href="contact.html"> Contact Us</a>
+                                <a class="hero-slider__btn" href="#contactus"> Contact Us</a>
                             </div>
                         </div>
                     </div>
@@ -197,8 +208,6 @@ $(document).ready(function(){
                              tailored to your needs and preferences. Whether you're looking for an adventure-packed itinerary or a relaxing getaway, our team of experts will work with you to create a personalized tour that meets your expectations and exceeds them. We take care of every detail, from transport and accommodation to activities and dining, so that you can focus on enjoying your trip. 
                              </p>
                         <p>With us, you can be confident that you'll receive exceptional service, high-quality experiences, and unforgettable memories that will last a lifetime. </p>
-
-                        <a href="about.html" class="read-btn">Read More</a>
                     </div>
                 </div>
             </div>
@@ -326,7 +335,7 @@ $(document).ready(function(){
                                     </ul>
                                 </div>
                                 <!--/.duration-->
-                                <a href="contact-us.html" class="btn-packlist">Book now</a>
+                                <a href="#contactus" class="btn-packlist">Book now</a>
                             </div>
                         </div>
                     </div>
@@ -464,7 +473,7 @@ $(document).ready(function(){
     </section>
     <!-- End-Partner-section -->
     <!-- Footer-section -->
-    <footer class="ws-section-spacing img-footer">
+    <footer id="contactus" class="ws-section-spacing img-footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12">
@@ -534,13 +543,6 @@ $(document).ready(function(){
     <!-- Back to top button -->
     <a id="btn-to-top" class="show"></a>
     <!-- Jquery.min.js-->
-    <script>
-        $("#servicesbtn").click(function() {
-    $('html,body').animate({
-        scrollTop: $("#services").offset().top},
-        'slow');
-});
-    </script>
     <script src="js/jquery.1.12.4.js"></script>
     <!--bootstrap.min.js-->
     <script src="js/bootstrap.min.js"></script>
